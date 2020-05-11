@@ -13,3 +13,19 @@ function maior (){
         alert("Os maiores números são iguais")
     }
 }
+
+function maiorv2(){
+    var n1 = prompt("Digite o primeiro numero:");
+    var n2 = prompt("Digite o segundo numero:");
+    var n3 = prompt("Digite o terceiro numero:");
+
+    var x = Math.max(n1,n2);
+    var y = Math.max(n2,n3);
+
+    if (x != y){
+        alert("O maior numero é: " + Math.max(x,y));
+    }
+    else{
+        alert("Os números são iguais");
+    }
+}
