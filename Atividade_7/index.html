@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+    <script src="atividade7.js"></script>
+</head>
+
+<body>
+    <script>atividadeA();</script>
+    <script>
+        function Conta(nome, banco, numConta) {
+
+                var nome;
+                var banco;
+                var numConta;
+                var saldo;
+
+                this.setNome = function (nome) {
+                    this.nome = nome;
+                }
+                this.getNome = function () {
+                    return nome;
+                }
+                this.setBanco = function (banco) {
+                    this.banco = banco;
+                }
+                this.getBanco = function () {
+                    return banco;
+                }
+                this.setNumConta = function (numConta) {
+                    this.numConta = numConta;
+                }
+                this.getNumConta = function () {
+                    return numConta;
+                }
+
+                this.setSaldo = function (saldo) {
+                    this.saldo = saldo;
+                }
+                this.getSaldo = function () {
+                    return saldo;
+                }
+                this.getNome = function () {
+                    return nome;
+                }
+
+                this.getBanco = function () {
+                    return banco;
+                }
+                this.getNumConta = function () {
+                    return numConta;
+                }
+
+            }
+
+            function contaCorrente() {
+                var saldoEspecial;
+
+                this.setSaldoEspecial = function (saldoEspecial) {
+                    this.saldoEspecial = saldoEspecial;
+                }
+
+                this.getSaldoEspecial = function () {
+                    return saldoEspecial;
+                }
+
+
+            }
+
+            function contaPoupança() {
+                var juros;
+                var dtVencimento;
+
+                this.setJuros = function (juros) {
+                    this.juros = juros;
+                }
+                this.getJuros = function () {
+                    return juros;
+                }
+                this.setDtVencimento = function (dtVencimento) {
+                    this.dtVencimento = dtVencimento;
+                }
+                this.getDtVencimento = function () {
+                    return dtVencimento;
+                }
+
+            }
+
+            contaCorrente.prototype = new Conta();
+            contaPoupança.prototype = new Conta();
+
+            ContaCorrente = new contaCorrente();
+            ContaCorrente.setNome("João");
+            ContaCorrente.setBanco("Bradesco");
+            ContaCorrente.setNumConta(1234);
+            ContaCorrente.setSaldo(100.5);
+            ContaCorrente.setSaldoEspecial(55.32);
+
+            ContaPoupança = new ContaPoupança();
+            ContaPoupança.setNome("João");
+            ContaPoupança.setBanco("Bradesco");
+            ContaPoupança.setNumConta(1234);
+            ContaPoupança.setSaldo(100.5);
+            ContaPoupança.setSaldoEspecial(55.32);
+
+
+            alert(
+                ContaCorrente.getBanco() + '\n' +
+                ContaCorrente.getNome() + '\n' +
+                ContaCorrente.getNumero() + '\n' +
+                ContaCorrente.getSaldo() + '\n' +
+                ContaCorrente.getSaldoEspecial()
+            )
+
+            alert(
+                ContaPoupança.getBanco() + '\n' +
+                ContaPoupança.getNome() + '\n' +
+                ContaPoupança.getNumero() + '\n' +
+                ContaPoupança.getSaldo() + '\n' +
+                ContaPoupança.getSaldoEspecial()
+            )
+    </script>
+</body>
+
+</html>
